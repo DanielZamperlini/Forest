@@ -1,0 +1,38 @@
+// 1° - instale as extenções
+
+Live Preview
+Tailwind CSS IntelliSence
+Prettier
+
+// 2° - instalar o tailwind
+
+rodar o npm install -D tailwindcss@3
+depois npx tailwindcss init
+
+// 3° - criar uma pasta com nome src
+criar os seguintes arquivos dentro dela
+index.html, input.css
+
+colocar esse codigo no input.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+e esse no index.html apos criar a base apertando ctrl + !
+<link rel="stylesheet" href="./output.css" />
+
+// 4° - colocar essa configuração no tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/**/*.{html,js}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+// 5° - iniciar o tailwind , esse passo deve se fazer toda vez que abrir o projeto
+
+rodar
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
