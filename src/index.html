@@ -6,9 +6,51 @@
     <link rel="stylesheet" href="./output.css" />
     <title>Forest</title>
   </head>
-  <body class="flex max-w-screen-lg">
-    <h1 class="px-8 py-1 bg-gray-500 m-auto border-red-300 rounded-md my-2">
-      Olá Mundo
-    </h1>
+  <body class="bg-verde-800 font-sans">
+    <div class="container mt-4 flex justify-center md:justify-start">
+      <div class="inline-flex items-center rounded-md bg-verde-900">
+        <span
+          class="relative size-2 bg-verde-300 block rounded-full -left-1"
+        ></span>
+        <div class="flex text-verde-300 divide-x-2 divide-verde-800">
+          <div class="capitalize px-4 py-2" id="dia">Segunda</div>
+          <div class="px-4 py-2" id="temperatura">25°</div>
+          <div class="px-4 py-2" id="tempo">🌥️</div>
+        </div>
+      </div>
+    </div>
+    <header class="container items-center flex justify-between gap-8 py-8">
+      <a href="./">
+        <img src="./img/forest.svg" alt="" />
+      </a>
+      <nav>
+        <ul class="text-white text-xl flex flex-wrap gap-8">
+          <li>
+            <a
+              class="hover:underline hover:underline-offset-8"
+              href="#acomodacoes"
+              >Acomodações</a
+            >
+          </li>
+          <li>
+            <a class="hover:underline hover:underline-offset-8" href="#eventos"
+              >Eventos</a
+            >
+          </li>
+          <li>
+            <a
+              class="hover:underline hover:underline-offset-8"
+              href="#experiencias"
+              >Experiências</a
+            >
+          </li>
+          <li>
+            <a class="hover:underline hover:underline-offset-8" href="#contato"
+              >Contato</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
