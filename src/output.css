@@ -558,6 +558,8 @@ video {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
 }
 
 @media (min-width: 640px) {
@@ -730,6 +732,22 @@ video {
 
 .max-w-screen-sm {
   max-width: 640px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn .4s ease-in-out forwards;
 }
 
 .cursor-pointer {
@@ -913,12 +931,12 @@ video {
   background-color: rgb(15 28 21 / var(--tw-bg-opacity, 1));
 }
 
-.bg-verde-950\/60 {
-  background-color: rgb(3 5 4 / 0.6);
-}
-
 .bg-verde-950\/40 {
   background-color: rgb(3 5 4 / 0.4);
+}
+
+.bg-verde-950\/60 {
+  background-color: rgb(3 5 4 / 0.6);
 }
 
 .bg-\[url\(\'\.\/img\/padrao\.svg\'\)\] {
@@ -1065,11 +1083,6 @@ video {
   line-height: 1.75rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
@@ -1157,6 +1170,22 @@ video {
   transition-duration: 150ms;
 }
 
+.animate-1 {
+  animation-delay: 100ms;
+}
+
+.animate-2 {
+  animation-delay: 200ms;
+}
+
+.animate-3 {
+  animation-delay: 300ms;
+}
+
+.animate-4 {
+  animation-delay: 400ms;
+}
+
 .\*\:col-start-1 > * {
   grid-column-start: 1;
 }
@@ -1236,16 +1265,8 @@ video {
   color: rgb(145 238 119 / var(--tw-text-opacity, 1));
 }
 
-.hover\:underline:hover {
-  text-decoration-line: underline;
-}
-
 .hover\:no-underline:hover {
   text-decoration-line: none;
-}
-
-.hover\:underline-offset-8:hover {
-  text-underline-offset: 8px;
 }
 
 .hover\:before\:w-10:hover::before {
